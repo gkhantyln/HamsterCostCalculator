@@ -1,0 +1,79 @@
+PR&Team,CEO,12661.75
+PR&Team,Marketing,3758.357512953368
+PR&Team,IT Team,4689.830747531735
+PR&Team,Support team,6023.714975845411
+PR&Team,HamsterBook,9052.29411764706
+PR&Team,HamsterTube,8453.05633802817
+PR&Team,X,8698.07114624506
+PR&Team,Cointelegraph,11114.20634920635
+PR&Team,HamsterGram,12661.753164556962
+PR&Team,TikTok,4226.810169491526
+PR&Team,Coindesk,7044.682203389831
+PR&Team,Influencers,2434.103355704698
+PR&Team,Partnership program,4015.8115942028985
+PR&Team,Product team,5635.745762711865
+PR&Team,BisDev team,12661.753164556962
+PR&Team,Two factor authentication,4505.542005420054
+PR&Team,UX and UI team,2443.9729206963248
+PR&Team,Security team,2817.8728813559323
+PR&Team,QA team,1764.9580152671756
+PR&Team,Antihacking shield,2340.1197183098593
+PR&Team,Risk management team,1984.577291381669
+PR&Team,Security Audition,3863.9186046511627
+PR&Team,Anonymous transactions ban,1688.8160270880362
+PR&Team,Blocking suspicious accounts,2056.018140589569
+PR&Team,Tokenomics expert,2628.126811594203
+PR&Team,Consensus Explorer pass,2146.6222222222223
+PR&Team,VC Labs,3992.717829457364
+PR&Team,Compliance officer,3763.883495145631
+Legal,KYC,29737.08823529412
+Legal,KYB,10529.247368421053
+Legal,Legal opinion,9392.909604519775
+Legal,SEC transparancy,11271.49152542373
+Legal,Anti money loundering,1380.735457063712
+Legal,Licence UAE,2339.8806451612904
+Legal,Licence Europe,1822.5201005025126
+Legal,Licence Asia,1741.5995807127883
+Legal,Licence South America,3358.162037037037
+Legal,Licence Australia,1929.156914893617
+Legal,Licence North America,1339.9076612903225
+Legal,Licence Nigeria,2319.923240938166
+Legal,Licence Japan,1274.6459330143541
+Legal,Licence Philippines,43.639802631578945
+Specials,Web3 Game Con,897.0040740740741
+Specials,X Network 10 Million,1160.668049792531
+Specials,Hamster Green energy,2233.907608695652
+Specials,Youtube 25 Million,1103.569741697417
+Specials,TG Leaders,1232.8055649241146
+Specials,Premarket Launch,1010.7828861493836
+Specials,Hamster Kombat merch,16907.240677966103
+Specials,TON Hamster Kombat Success,996.1757857974388
+Specials,Consensus Piranha Pass,1744.9847161572052
+Specials,Web3 academy launch,944.5136950904392
+Specials,Youtube Gold Button,5118.6736453201975
+Specials,Hamster Youtube Channel,3379.1571815718157
+Specials,Bitcoin Pizza Day,5635.745762711865
+Specials,Top 10 Global ranking,1075.3951456310679
+Specials,Special Hamster Conference,3125.084962406015
+Specials,There are two chairs,1658.097510373444
+Specials,Apps Center Listing,994.8585062240664
+Specials,Bogdanoff is calling,2768.56106870229
+Markets,Fan tokens,2768.56106870229
+Markets,Staking,7370.4715789473685
+Markets,BTC Pairs,7938.714285714285
+Markets,ETH Pairs,22468.02962962963
+Markets,Top 10 cmc pairs,7044.682203389831
+Markets,GameFi tokens,21330.40928270042
+Markets,Defi2.0 tokens,15877.436507936507
+Markets,SocialFi tokens,12661.753164556962
+Markets,Meme coins,10231.046153846153
+Markets,Shit coins,1093.082894736842
+Markets,Margin trading x10,2389.205533596838
+Markets,Margin trading x20,1877.2329192546583
+Markets,Margin trading x30,1839.6884057971015
+Markets,Margin trading x50,2386.0625
+Markets,Derivatives,2846.8239726027396
+Markets,Web3 integration,1058.789705882353
+Markets,P2P trading,1381.829702970297
+Markets,Trading bots,6061.362847222223
+Markets,LayersZero Listing,736.5926267281106
