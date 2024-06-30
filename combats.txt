@@ -1,18 +1,21 @@
-Specials,Web3 academy launch,944.5136950904392,0.0,0.0
-Specials,Apps Center Listing,994.8585062240664,0.0,0.0
-Specials,TON Hamster Kombat Success,996.1757857974388,0.0,0.0
-Specials,Premarket Launch,1010.7828861493836,0.0,0.0
-Markets,Web3 integration,1058.789705882353,0.0,0.0
-Specials,Top 10 Global ranking,1075.3951456310679,0.0,0.0
-Markets,Shit coins,1093.082894736842,0.0,0.0
-Specials,X Network 10 Million,1160.668049792531,0.0,0.0
-Specials,TG Leaders,1232.8055649241146,0.0,0.0
-Legal,Licence Japan,1274.6459330143541,0.0,0.0
-Legal,Licence North America,1339.9076612903225,0.0,0.0
-Legal,Anti money loundering,1380.735457063712,0.0,0.0
-Markets,P2P trading,1381.829702970297,0.0,0.0
-Markets,LayersZero Listing,1432.3150862068965,0.0,0.0
-Specials,There are two chairs,1658.097510373444,0.0,0.0
+Legal,Licence Philippines,827.1553961748634,14640.0,12109555.0
+Specials,Hamsters break records,1377.3415019762847,5060.0,6969348.0
+Specials,Web3 academy launch,1927.2929951690821,4140.0,7978993.0
+Specials,Apps Center Listing,1931.9600775193799,2580.0,4984457.0
+Specials,TON Hamster Kombat Success,1516.7242655059847,9190.0,13938696.0
+Specials,Premarket Launch,1616.2644745762711,14750.0,23839901.0
+Markets,Web3 integration,2162.779357798165,2180.0,4714859.0
+Specials,Top 10 Global ranking,2191.429003021148,3310.0,7253630.0
+Markets,Shit coins,2225.0398773006136,1630.0,3626815.0
+Specials,X Network 10 Million,2258.330097087379,1030.0,2326080.0
+Specials,TG Leaders,2513.068503937008,6350.0,15957985.0
+Legal,Licence Japan,1274.6459330143541,6270.0,7992030.0
+Legal,Licence North America,2737.2188679245282,2650.0,7253630.0
+Legal,Anti money loundering,1380.735457063712,722.0,996891.0
+Markets,P2P trading,1381.829702970297,1010.0,1395648.0
+Markets,LayersZero Listing,1432.3150862068965,2320.0,3322971.0
+Specials,There are two chairs,1658.097510373444,4820.0,7992030.0
+Specials,Web3 Game Con,1659.2449826989618,2890.0,4795218.0
 PR&Team,Anonymous transactions ban,1688.8160270880362,0.0,0.0
 Legal,Licence Asia,1741.5995807127883,0.0,0.0
 Specials,Consensus Piranha Pass,1744.9847161572052,0.0,0.0
@@ -32,7 +35,7 @@ Markets,Margin trading x50,2386.0625,0.0,0.0
 Markets,Margin trading x10,2389.205533596838,0.0,0.0
 PR&Team,Influencers,2434.103355704698,0.0,0.0
 PR&Team,UX and UI team,2443.9729206963248,0.0,0.0
-PR&Team,Tokenomics expert,2628.126811594203,0.0,0.0
+PR&Team,Tokenomics expert,5616.7067567567565,1480.0,8312726.0
 Specials,Bogdanoff is calling,2768.56106870229,0.0,0.0
 Markets,Fan tokens,2768.56106870229,0.0,0.0
 PR&Team,Security team,2817.8728813559323,0.0,0.0
@@ -63,7 +66,7 @@ PR&Team,X,8698.07114624506,0.0,0.0
 PR&Team,HamsterBook,9052.29411764706,0.0,0.0
 Legal,Legal opinion,9392.909604519775,0.0,0.0
 Markets,Meme coins,10231.046153846153,0.0,0.0
-Legal,KYB,10529.247368421053,0.0,0.0
+Legal,KYB,24902.99014778325,203.0,5055307.0
 PR&Team,Cointelegraph,11114.20634920635,0.0,0.0
 Legal,SEC transparancy,11271.49152542373,0.0,0.0
 PR&Team,CEO,12661.75,0.0,0.0
@@ -74,7 +77,4 @@ Markets,Defi2.0 tokens,15877.436507936507,0.0,0.0
 Specials,Hamster Kombat merch,16907.240677966103,0.0,0.0
 Markets,GameFi tokens,21330.40928270042,0.0,0.0
 Markets,ETH Pairs,22468.02962962963,0.0,0.0
-Legal,KYC,29737.08823529412,0.0,0.0
-Specials,Hamsters break records,451.99225181598064,4130.0,1866728.0
-Specials,Web3 Game Con,897.0040740740741,2700.0,2421911.0
-Legal,Licence Philippines,469.44115497076024,13680.0,6421955.0
+Legal,KYC,29737.08823529412,34.0,1011061.0
