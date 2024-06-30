@@ -25,6 +25,30 @@ Hamster Kombat Cost Calculator is a desktop application built using tkinter. Thi
 
 ![Application Screenshot](costhamster.png)
 
+
+# Profitability Calculations
+
+In this section, we will calculate the profitability ratio of two products. The hourly profit ratio is obtained by dividing the product price by the hourly profit.
+
+**Profitability Ratio** = Product Price / Hourly Profit
+
+## Product 1
+
+- **Product Price:** 12,109,555 TL
+- **Hourly Profit:** 14,640 TL/hour
+
+**Profitability Ratio**: 12,109,555 / 14,640 ≈ 827.22 hours
+
+## Product 2
+
+- **Product Price:** 6,969,348 TL
+- **Hourly Profit:** 5,060 TL/hour
+
+**Profitability Ratio**: 6,969,348 / 5,060 ≈ 1377.25 hours
+
+According to this calculation, **the first product is more profitable** because it has a lower profitability ratio.
+
+
 ## Contributing
 
 1. Fork this project.
