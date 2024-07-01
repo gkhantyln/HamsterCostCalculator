@@ -100,6 +100,7 @@ class HamsterKombatApp:
             hourly24_value = profit * 24
 
             self.entries.append((category, card_name, cost, profit, coin, hourly24_value))
+            self.entries.sort(key=lambda x: x[2])  # Sort by Cost Value
             self.save_data()
             self.update_table()
             data_window.destroy()
@@ -167,6 +168,7 @@ class HamsterKombatApp:
                     self.entries[i] = (new_category, new_card_name, new_cost, new_profit, new_coin, new_hourly24_value)
                     break
 
+            self.entries.sort(key=lambda x: x[2])  # Sort by Cost Value
             self.save_data()
             self.update_table()
             edit_window.destroy()
@@ -177,8 +179,6 @@ class HamsterKombatApp:
         for row in self.tree.get_children():
             self.tree.delete(row)
 
-        sorted_entries = sorted(self.entries, key=lambda x: x[2])  # Sort by Cost Value
-        
         for i, (category, card_name, cost, profit, coin, hourly24_value) in enumerate(self.entries):
             self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}", f"{hourly24_value:.2f}"))
 
