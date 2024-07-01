@@ -19,6 +19,9 @@ class HamsterKombatApp:
         # Create table
         self.create_table()
 
+        # Create sorting buttons
+        self.create_sorting_buttons()
+
         # Populate table with loaded data
         self.update_table()
 
@@ -46,16 +49,31 @@ class HamsterKombatApp:
         self.table_frame = ttk.Frame(self.root)
         self.table_frame.pack(pady=20)
 
-        self.tree = ttk.Treeview(self.table_frame, columns=("category", "card_name", "cost_value", "hourly_profit", "card_value"), show="headings")
+        self.tree = ttk.Treeview(self.table_frame, columns=("category", "card_name", "cost_value", "hourly_profit", "card_value", "hourly24_value"), show="headings")
         self.tree.heading("category", text="Category")
         self.tree.heading("card_name", text="Card Name")
-        self.tree.heading("cost_value", text="Cost Value", command=lambda: self.sort_table("cost_value"))
-        self.tree.heading("hourly_profit", text="Hourly Profit", command=lambda: self.sort_table("hourly_profit"))
-        self.tree.heading("card_value", text="Card Value", command=lambda: self.sort_table("card_value"))
+        self.tree.heading("cost_value", text="Cost Value")
+        self.tree.heading("hourly_profit", text="Hourly Profit")
+        self.tree.heading("card_value", text="Card Value")
+        self.tree.heading("hourly24_value", text="1 Day")
 
         self.tree.bind("<Double-1>", self.on_item_double_click)
 
         self.tree.pack()
+
+    def create_sorting_buttons(self):
+        sort_frame = ttk.Frame(self.root)
+        sort_frame.pack(pady=10)
+
+        sort_buttons = {
+            "Cost": tk.Button(sort_frame, text="Cost", command=lambda: self.sort_table("cost_value")),
+            "Hourly": tk.Button(sort_frame, text="Hourly", command=lambda: self.sort_table("hourly_profit")),
+            "Card": tk.Button(sort_frame, text="Card", command=lambda: self.sort_table("card_value")),
+            "1 Day": tk.Button(sort_frame, text="1 Day", command=lambda: self.sort_table("hourly24_value")),
+        }
+
+        for button in sort_buttons.values():
+            button.pack(side=tk.LEFT, padx=5)
 
     def get_data(self, category):
         data_window = tk.Toplevel(self.root)
@@ -79,8 +97,9 @@ class HamsterKombatApp:
             coin = float(coin_entry.get())
             profit = float(profit_entry.get())
             cost = coin / profit
+            hourly24_value = profit * 24
 
-            self.entries.append((category, card_name, cost, profit, coin))
+            self.entries.append((category, card_name, cost, profit, coin, hourly24_value))
             self.save_data()
             self.update_table()
             data_window.destroy()
@@ -90,7 +109,7 @@ class HamsterKombatApp:
     def on_item_double_click(self, event):
         item_id = self.tree.selection()[0]
         item = self.tree.item(item_id)
-        category, card_name, cost, profit, coin = item['values']
+        category, card_name, cost, profit, coin, hourly24_value = item['values']
 
         edit_window = tk.Toplevel(self.root)
         edit_window.title("Edit Entry")
@@ -141,10 +160,11 @@ class HamsterKombatApp:
             new_coin = float(coin_entry.get())
             new_profit = float(profit_entry.get())
             new_cost = new_coin / new_profit
+            new_hourly24_value = new_profit * 24
 
             for i, entry in enumerate(self.entries):
                 if entry[1] == card_name:  # Find by card name
-                    self.entries[i] = (new_category, new_card_name, new_cost, new_profit, new_coin)
+                    self.entries[i] = (new_category, new_card_name, new_cost, new_profit, new_coin, new_hourly24_value)
                     break
 
             self.save_data()
@@ -157,21 +177,25 @@ class HamsterKombatApp:
         for row in self.tree.get_children():
             self.tree.delete(row)
 
-        sorted_entries = sorted(self.entries, key=lambda x: x[2])  # Sort by Cost Value
-        for i, (category, card_name, cost, profit, coin) in enumerate(sorted_entries):
-            self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}"))
+        for i, (category, card_name, cost, profit, coin, hourly24_value) in enumerate(self.entries):
+            self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}", f"{hourly24_value:.2f}"))
 
     def save_data(self):
         with open("combats.txt", "w") as f:
             for entry in self.entries:
-                f.write(f"{entry[0]},{entry[1]},{entry[2]},{entry[3]},{entry[4]}\n")
+                f.write(f"{entry[0]},{entry[1]},{entry[2]},{entry[3]},{entry[4]},{entry[5]}\n")
 
     def load_data(self):
         if os.path.exists("combats.txt"):
             with open("combats.txt", "r") as f:
                 for line in f:
-                    category, card_name, cost, profit, coin = line.strip().split(",")
-                    self.entries.append((category, card_name, float(cost), float(profit), float(coin)))
+                    parts = line.strip().split(",")
+                    if len(parts) == 5:
+                        category, card_name, cost, profit, coin = parts
+                        hourly24_value = float(profit) * 24
+                    else:
+                        category, card_name, cost, profit, coin, hourly24_value = parts
+                    self.entries.append((category, card_name, float(cost), float(profit), float(coin), float(hourly24_value)))
 
     def filter_by_card_name(self):
         filter_text = self.filter_entry.get().strip().lower()
@@ -187,11 +211,16 @@ class HamsterKombatApp:
             self.tree.delete(row)
 
         sorted_entries = sorted(filtered_entries, key=lambda x: x[2])  # Sort by Cost Value
-        for i, (category, card_name, cost, profit, coin) in enumerate(sorted_entries):
-            self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}"))
+        for i, (category, card_name, cost, profit, coin, hourly24_value) in enumerate(sorted_entries):
+            self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}", f"{hourly24_value:.2f}"))
 
     def sort_table(self, col):
-        self.entries.sort(key=lambda x: x[{"category": 0, "card_name": 1, "cost_value": 2, "hourly_profit": 3, "card_value": 4}[col]])
+
+        if col == "cost_value":
+            self.entries.sort(key=lambda x: x[2])
+        else:
+            self.entries.sort(key=lambda x: x[{"category": 0, "card_name": 1, "hourly_profit": 3, "card_value": 4, "hourly24_value": 5}[col]], reverse=True)
+
         self.update_table()
 
 if __name__ == "__main__":
