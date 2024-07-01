@@ -23,7 +23,7 @@ Hamster Kombat Cost Calculator is a desktop application built using tkinter. Thi
 
 ## Screenshots
 
-![Application Screenshot](hamsterCombat.png)
+![Application Screenshot](hamsterCombats.png)
 
 
 # Profitability Calculations
