@@ -55,7 +55,7 @@ class HamsterKombatApp:
         self.tree.heading("cost_value", text="Cost Value")
         self.tree.heading("hourly_profit", text="Hourly Profit")
         self.tree.heading("card_value", text="Card Value")
-        self.tree.heading("hourly24_value", text="1 Day")
+        self.tree.heading("hourly24_value", text="One Day")
 
         self.tree.bind("<Double-1>", self.on_item_double_click)
 
@@ -177,6 +177,8 @@ class HamsterKombatApp:
         for row in self.tree.get_children():
             self.tree.delete(row)
 
+        sorted_entries = sorted(self.entries, key=lambda x: x[2])  # Sort by Cost Value
+        
         for i, (category, card_name, cost, profit, coin, hourly24_value) in enumerate(self.entries):
             self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}", f"{hourly24_value:.2f}"))
 
@@ -215,7 +217,6 @@ class HamsterKombatApp:
             self.tree.insert("", "end", values=(category, card_name, f"{cost:.2f}", f"{profit:.2f}", f"{coin:.2f}", f"{hourly24_value:.2f}"))
 
     def sort_table(self, col):
-
         if col == "cost_value":
             self.entries.sort(key=lambda x: x[2])
         else:
